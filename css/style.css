@@ -1,0 +1,284 @@
+/*developed by Eshchenko Mikhail mikhail.eshchenko@gmail.com*/
+*{
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    cursor: default;
+}
+html{
+	background-color: #fff;
+}
+.wrapper{
+	position: absolute;{
+		width: 500px;
+		height: 500px;
+	}
+}
+.container{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	justify-content: center;
+}
+.window{
+	width:402px;
+	height:405px;
+	border: 10px solid #ffd139;
+	position: relative;
+	top:0px;
+	left: 0px;
+	overflow: hidden;
+	border-radius:7px;
+}
+.slotLine{
+	position: absolute;
+	top: 0;
+	background-color: #ffd139;
+}
+.slotLine0{
+	left: 0px;
+}
+.slotLine1{
+	left: 128px;
+}
+.slotLine2{
+	left: 256px;
+}
+.slotLineInner{
+	width: 126px;
+	height: 126px;
+}
+/*Кнопки и экранчики*/
+.control-panel{
+	position: relative;
+	width: 100%;
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.score-line,.btn-line{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.bet,.score{
+	height: 40px;
+	width: 49%;
+	margin: 0px;
+	position: relative;
+	border: 2px solid #ffd139;
+	display: inline-block;
+	font-size: 12px;
+	color: #555;
+	padding-top: 3px;
+	padding-left: 5px;
+}
+.bet{
+	float: left;
+}
+.score{
+	float: right;
+}
+.bet-wrap{
+	float: left;
+	height: 40px;
+	width: 110px;
+}
+.msg-wrap{
+	float: left;
+	height: 40px;
+	margin: 0 auto;
+	color: #ffd139;
+	text-align: center;
+	width: 170px;
+	text-align: center;
+	display: none;
+}
+.msg-wrap p{
+	margin: 0;
+	padding: 0;
+}
+.msg-wrap p:nth-child(1){
+	font-size: 20px;
+}
+.msg-wrap p:nth-child(2){
+	font-size: 16px;
+}
+.btn{
+	font-size: 10px;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	padding : 5px 10px;
+	text-transform: uppercase;
+	height: 100%;
+	position: relative;
+	transition:background-color 0.1s;
+}
+.bet-btn span{
+	display: block;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 11px;
+	left: 13px;
+}
+.btn-wrap{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	width: 110px;
+	float: right;
+	justify-content: flex-end;
+}
+.btn-wrap .btn:nth-child(2){
+	margin-left: 10px;
+}
+
+.bet-btn:nth-child(1) span{
+	top: 10px;
+	left: 16px;
+}
+.bet-btn:nth-child(1){
+	margin-right: 10px;
+}
+.btn{
+	color:#333;
+	font-size: 10px;
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: top;
+	background-image: url("../images/svg/buttons_small.svg");
+	background-repeat: no-repeat;
+	background-size: 94px 339px;
+	background-position: 0 0;
+	padding-top: 0;
+	padding-left: 6px;
+	padding-right: 3px;
+	padding-bottom: 18px;
+	display: inline-block;
+	box-sizing: border-box;
+	height: 50px;
+	width: 47px;
+}
+.btn:active {
+	background-position: -53px 0;
+}
+.btn span{
+	position: relative;
+	top: 8px;
+	left: -2px;
+}
+.btn:active span {
+	top: 16px; 
+	left: -8px;
+}
+
+.btn-auto span{
+	position: relative;
+	top: 4px;
+	left: -2px;
+}
+.btn-auto:active span {
+	position: relative;
+	top: 12px; 
+	left: -8px;
+}
+ 
+.btn.btn-active{
+	background-position: 0 -280px;
+}
+.btn.btn-active:active{
+	background-position: -53px -280px;
+}
+
+.score-inner, .bet-inner{
+	float: right;
+	font-size: 16px;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+}
+
+.frame{
+	position: absolute;
+	width: 370px;
+	height: 124px;
+	border: 3px solid transparent;
+	left:7px;
+	border-radius: 7px;
+}
+#frame0{
+	top:10px;
+}
+#frame1{
+	top:131px;
+}
+#frame2{
+	top:251px;
+}
+.active{
+	border-color:#f00;
+	animation: pulse 0.2s infinite;
+}
+
+.balanceIncrease{
+	animation: pulseBalance 0.4s infinite;
+}
+
+@keyframes pulseBalance{
+	0%{transform:scale(1.2);};
+	100%{transform:scale(1);};
+}
+
+@keyframes pulse{
+	0%{
+		box-shadow: 0 0 0 0 rgba(255,0,0,0.7);
+	}
+	100%{
+		box-shadow: 0 0 0 10px rgba(255,0,0,0.7);
+	}
+}
+.banana{
+	background-image: url(../images/banana.png);
+}
+.cherries{
+	background-image: url(../images/cherries.png);
+}
+.lemon{
+	background-image: url(../images/lemon.png);
+}
+.orange{
+	background-image: url(../images/orange.png);
+}
+.plum{
+	background-image: url(../images/plum.png);
+}
+
+.seven{
+	background-image: url(../images/seven.png);
+}
+
+.watermelon{
+	background-image: url(../images/watermelon.png);
+}
