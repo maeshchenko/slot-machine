@@ -1,4 +1,4 @@
-# VanillaJS super-duper Slot-machine
+# VanillaJS Super Duper Slot Machine
 Работающая онлайн версия: http://делаю-сайты.рус/slot-machine/
 
 Backlog:
